@@ -13,20 +13,20 @@ public class Main {
         String[] operation = {"+", "-", "*", "/"};
         String[] regexOperation = {"\\+", "\\-", "\\*", "\\/"};
 
-        int j = 0;
+        int j = -1;
         for (int i = 0; i < operation.length; i++) {
             if (input.contains(operation[i])) {
                 j = i;
                 break;
             }
         }
+        if (j == -1)  {
+            throw new Exception("т.к. строка не является математической операцией");
+        }
+        
         String[] num = input.split(regexOperation[j]);
         if (num.length != 2) {
             throw new Exception("т.к. формат математической операции не удовлетворяет заданию - два операнда и один оператор (+, -, /, *)");
-        }
-
-        if (j > 2) { 
-            throw new Exception("т.к. строка не является математической операцией");
         }
 
         int a, b;
