@@ -12,7 +12,9 @@ public class Konvert {
         romeKeyMap.put('C', 100);
 
         arabKeyMap.put(1, "I");
+        arabKeyMap.put(4, "IV");
         arabKeyMap.put(5, "V");
+        arabKeyMap.put(9, "IX");
         arabKeyMap.put(10, "X");
         arabKeyMap.put(50, "L");
         arabKeyMap.put(100, "C");
